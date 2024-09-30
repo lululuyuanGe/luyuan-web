@@ -694,8 +694,9 @@
  input[type="submit"].button-primary,
  input[type="reset"].button-primary,
  input[type="button"].button-primary {
-   background: #313131;
-   color: #FFFFFF;
+   background: none;
+   color: var(--text-color);
+   border: 3px solid #FF0077;
  }
  .button.button-primary:hover,
  a.button.button-primary:hover,
@@ -726,7 +727,8 @@
  }
  button.stroke, .button.stroke {
    background: transparent !important;
-   border: 3px solid #313131;
+   border: 3px solid #FF0077;
+   color: var(--text-color);
    line-height: 4.8rem;
  }
  button.stroke.medium, .button.stroke.medium {
@@ -1090,17 +1092,17 @@
    min-height: 66px;
    z-index: 600;
    padding-left: 0;
-
+   background: none !important;
  }
  header .row {
    gap: -20px;
    min-height: 66px;
    text-align: left;
    padding-left: 0;
+   background: none;
  }
  header .top-bar {
    display: flex;
-   
    background: transparent;
    min-width: 108px;
    min-height: 66px;
@@ -1256,6 +1258,7 @@
   
   /* Custom dropdown container */
   .custom-dropdown {
+  font-family: "poppins-bold", sans-serif;  
   position: absolute;
   left: 40px;
   top: 18px;
@@ -1331,8 +1334,93 @@
   height: 15px;
   }
 
+ /**
+  * Display mode
+  * ------------------------------------------------------------------- 
+  */
 
- 
+  /* Define light theme colors using CSS variables */
+  :root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --header-bg: #f0f0f0;
+    --link-color: #007bff;
+    --text-color-about-strong: #000000;
+    --text-color-about-span: #1f1818;
+    --bg-vdieo-contrast: 0.8;
+  }
+
+  /* Override variables for dark mode */
+  body.dark-mode {
+    --bg-color: #333333;
+    --text-color: #ffffff;
+    --header-bg: #444444;
+    --link-color: #1e90ff;
+    --text-color-about-strong: #ffffff;
+    --text-color-about-span: #e0dada;
+    --bg-vdieo-contrast: 1.5;
+  }
+
+  /* Apply variables throughout your CSS */
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  header {
+    background-color: var(--header-bg);
+  }
+
+  a {
+    color: var(--link-color);
+  }
+
+
+  .theme-toggle {
+    position: absolute;
+    top: 16px;
+    left: 115px;
+    width: 30px;  /* Adjust size */
+    height: 30px;
+    cursor: pointer;
+  }
+
+  .theme-icon {
+    position: absolute;
+    width: 100%;  /* Ensure it fills the container */
+    height: 100%;
+    transition: transform 0.5s ease, z-index 0.5s, opacity 0.5s ease;
+    border-radius: 50%; 
+  }
+
+  .light {
+    z-index: 1;   /* Light mode icon starts on top */
+    transform: rotate(0deg); /* No rotation initially */
+    opacity: 1; /* Fully visible */
+  }
+
+  .dark {
+    z-index: 0;   /* Dark mode icon starts underneath */
+    transform: rotate(0deg); /* No rotation initially */
+    opacity: 0;   /* Hidden initially */
+  }
+
+  body.dark-mode .light {
+    z-index: 0; 
+    transform: rotate(180deg);
+    opacity: 0; 
+  }
+
+  body.dark-mode .dark {
+    z-index: 1;
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+
+
+
+
  
  /** 
   * ===================================================================
@@ -1341,7 +1429,7 @@
   * ------------------------------------------------------------------- 
   */
  #intro {
-   background: #151515 url(../images/background.jpg) no-repeat center bottom;
+   /* background: #151515 url(../images/background.jpg) no-repeat center bottom; */
    -webkit-background-size: cover;
    -moz-background-size: cover;
    background-size: cover;
@@ -1354,6 +1442,17 @@
    text-align: center;
  }
 
+ /*Background video*/
+ #bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(1.5) var(--bg-vdieo-contrast);
+}
  
  .intro-overlay {
    position: absolute;
@@ -1539,13 +1638,21 @@
   * ------------------------------------------------------------------- 
   */
  #about {
-   background: #0c0b0b;
+   background: var(--bg-color);
    padding-top: 12rem;
    padding-bottom: 15rem;
  }
  #about .section-intro {
    margin-bottom: 3rem;
  }
+
+ #about .col-twelve h1{
+    color: var(--text-color); 
+ }
+
+  #about .col-twelve p{
+    color: var(--text-color); 
+  }
  
  .intro-info {
    margin-top: 4.2rem;
@@ -1586,7 +1693,7 @@
  }
  .about-content .info-list li strong {
    font-family: "poppins-bold", sans-serif;
-   color: #313131;
+   color: var(--text-color-about-strong-color);
    text-transform: uppercase;
    letter-spacing: .2rem;
    font-size: 1.5rem;
@@ -1595,7 +1702,7 @@
  .about-content .info-list li span {
    display: block;
    font-family: "poppins-regular", sans-serif;
-   color: #888888;
+   color: var(--text-color-about-span);
    font-size: 1.5rem;
    line-height: 1;
  }
@@ -1671,71 +1778,11 @@
   * ------------------------------------------------------------------- 
   */
  #portfolio {
-   background: rgb(21, 21, 21);
+   background: var(--bg-color);
    padding-top: 12rem;
    padding-bottom: 12rem;
  }
- #portfolio .folio-item {
-   padding: 0;
-   position: relative;
-   overflow: hidden;
- }
- #portfolio .folio-item img {
-   vertical-align: middle;
-   -moz-transition: all 0.5s ease-in-out;
-   -o-transition: all 0.5s ease-in-out;
-   -webkit-transition: all 0.5s ease-in-out;
-   -ms-transition: all 0.5s ease-in-out;
-   transition: all 0.5s ease-in-out;
- }
- 
- #portfolio .overlay {
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   background: transparent;
-   -moz-transition: all 0.5s ease-in-out;
-   -o-transition: all 0.5s ease-in-out;
-   -webkit-transition: all 0.5s ease-in-out;
-   -ms-transition: all 0.5s ease-in-out;
-   transition: all 0.5s ease-in-out;
- }
- 
- #portfolio .folio-item-table {
-   display: table;
-   width: 100%;
-   height: 100%;
- }
- #portfolio .folio-item-cell {
-   display: table-cell;
-   vertical-align: middle;
-   text-align: center;
-   -moz-transition: all 0.5s ease-in-out;
-   -o-transition: all 0.5s ease-in-out;
-   -webkit-transition: all 0.5s ease-in-out;
-   -ms-transition: all 0.5s ease-in-out;
-   transition: all 0.5s ease-in-out;
-   position: relative;
-   left: -100%;
- }
- 
- #portfolio .folio-title {
-   color: #FFFFFF;
-   font-size: 3.3rem;
-   padding: 0 3rem;
-   margin-bottom: 0;
- }
- #portfolio .folio-types {
-   margin: 0;
-   padding: 0;
-   text-transform: uppercase;
-   font-family: "poppins-regular", sans-serif;
-   font-size: 1.2rem;
-   letter-spacing: .1rem;
-   color: rgba(255, 255, 255, 0.6);
- }
+
  #portfolio .folio-item:hover .overlay {
    background: rgba(0, 0, 0, 0.8);
  }
@@ -1748,27 +1795,6 @@
    transform: scale(1.05);
  }
  
- /**
-  * responsive:
-  * portfolio
-  * ------------------------------------------------------------------- 
-  */
- @media only screen and (max-width:1024px) {
-   #portfolio .folio-title {
-     font-size: 3.1rem;
-   }
- }
- @media only screen and (max-width:768px) {
-   #portfolio .folio-title {
-     font-size: 2.5rem;
-   }
- }
- @media only screen and (max-width:400px) {
-   #portfolio .folio-title {
-     font-size: 2.2rem;
-   }
- }
-
   /**
   * Porjects:
   * grid layout
@@ -1784,7 +1810,7 @@
   }
 
   .projects-container .project {
-    background-color: #000000; 
+    background-color: var(--bg-color); 
     padding: 0;            
     text-align: center;        
     border: none; 
@@ -1821,7 +1847,7 @@
   }
 
   .projects-container .description p{
-    color: rgb(255, 255, 255);
+    color: var(--text-color);
     transition: text-decoration-color 0.3s ease;
   }
 
@@ -2051,7 +2077,7 @@
   * ------------------------------------------------------------------- 
   */
  #contact {
-   background: #151515;
+   background: #302c2c;
    padding-top: 12rem;
    padding-bottom: 7.2rem;
  }
@@ -2292,6 +2318,7 @@
   * ------------------------------------------------------------------- 
   */
  footer {
+   background-color: #302c2c;
    padding-bottom: 3rem;
    font-size: 1.4rem;
    font-family: "poppins-regular", sans-serif;

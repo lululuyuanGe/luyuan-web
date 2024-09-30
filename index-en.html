@@ -78,7 +78,11 @@
               </li>
           </ul>
         </div>
-            
+
+        <div class="theme-toggle" onclick="toggleTheme()">
+          <img id="light-icon" src="images/dark-light-icons/sun-svgrepo-com.svg" alt="Light Mode" class="theme-icon light" />
+          <img id="dark-icon" src="images/dark-light-icons/moon-svgrepo-com.svg" alt="Dark Mode" class="theme-icon dark" />
+        </div>
       
         <!-- /top-bar -->
       </div>
@@ -89,6 +93,12 @@
     <!-- intro section
    ================================================== -->
     <section id="intro">
+      <video autoplay muted loop id="bg-video">
+        <source id="video-source" src="../images/background/astronaut-cat-sitting-on-the-moon-moewalls-com.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      
       <div class="intro-overlay"></div>
 
       <div class="intro-content">
@@ -165,12 +175,9 @@
           <ul class="info-list">
             <li>
               <strong>Fullname:</strong>
-              <span>Owen Hua</span>
+              <span>Luyuan Ge</span>
             </li>
-            <li>
-              <strong>Birth Date:</strong>
-              <span>Apirl 18, 2005</span>
-            </li>
+
             <li>
               <strong>Job:</strong>
               <span>Data Analyst, Backend Developer</span>
@@ -267,176 +274,6 @@
         <div>project 5</div>
         <div>project 6</div> -->
       </div>
-
-
-            <!-- modal popups - begin
-	            ============================================================= -->
-            <div id="modal-01" class="popup-modal slider mfp-hide">
-              <div class="media">
-                <img src="images/portfolio/scraper.png" alt="" />
-              </div>
-
-              <div class="description-box">
-                <h4>Scraper</h4>
-                <p>Getting the information you want stored on a website.</p>
-
-                <div class="categories">Python Backend</div>
-              </div>
-
-              <div class="link-box">
-                <a href="https://github.com/LoveIiei/MySpotifyDownload"
-                  >Details</a
-                >
-                <a href="#" class="popup-modal-dismiss">Close</a>
-              </div>
-            </div>
-            <!-- /modal-01 -->
-
-            <div id="modal-02" class="popup-modal slider mfp-hide">
-              <div class="media">
-                <img src="images/portfolio/Minecraft.jpg" alt="" />
-              </div>
-
-              <div class="description-box">
-                <h4>Minecraft Mod</h4>
-                <p>
-                  Design and create a Minecraft watergun mod, that invovles 6
-                  different waterguns, which you can recharge with water when it
-                  is died.
-                </p>
-
-                <div class="categories">Java Programming</div>
-              </div>
-
-              <div class="link-box">
-                <a href="https://github.com/MDHSCompSci/Forge-MDHSCompsci-1.18"
-                  >Details</a
-                >
-                <a href="#" class="popup-modal-dismiss">Close</a>
-              </div>
-            </div>
-            <!-- /modal-02 -->
-
-            <div id="modal-03" class="popup-modal slider mfp-hide">
-              <div class="media">
-                <img src="images/portfolio/CheTimeLine.png" alt="" />
-              </div>
-
-              <div class="description-box">
-                <h4>Chemistry</h4>
-                <p>
-                  A timeline of all the important discover in atomic theory
-                  build in Python Tkinter
-                </p>
-
-                <div class="categories">UI Design</div>
-              </div>
-
-              <div class="link-box">
-                <a href="https://github.com/LoveIiei/AtomicTheoryPPT"
-                  >Details</a
-                >
-                <a href="#" class="popup-modal-dismiss">Close</a>
-              </div>
-            </div>
-            <!-- /modal-03 -->
-
-            <div id="modal-04" class="popup-modal slider mfp-hide">
-              <div class="media">
-                <img src="images/portfolio/rpg.png" alt="" />
-              </div>
-
-              <div class="description-box">
-                <h4>RPG game</h4>
-                <p>
-                  A small JRPG game build using RPG Maker MZ, with missions,
-                  pets, boss war...
-                </p>
-
-                <div class="categories">Video Game</div>
-              </div>
-
-              <div class="link-box">
-                <a href="https://www.rpgmakerweb.com/">Details</a>
-                <a href="#" class="popup-modal-dismiss">Close</a>
-              </div>
-            </div>
-            <!-- /modal-04 -->
-
-            <div id="modal-05" class="popup-modal slider mfp-hide">
-              <div class="media">
-                <img src="images/portfolio/ML.png" alt="" />
-              </div>
-
-              <div class="description-box">
-                <h4>Machine Learning</h4>
-                <p>
-                  A certificate received from Coursera after passing the course,
-                  leanred a great amount of knowledge through hands on activity.
-                </p>
-
-                <div class="categories">Data Analyst</div>
-              </div>
-
-              <div class="link-box">
-                <a
-                  href="https://www.coursera.org/professional-certificates/preparing-for-google-cloud-machine-learning-engineer-professional-certificate"
-                  >Details</a
-                >
-                <a href="#" class="popup-modal-dismiss">Close</a>
-              </div>
-            </div>
-            <!-- /modal-05 -->
-
-            <div id="modal-06" class="popup-modal slider mfp-hide">
-              <div class="media">
-                <img src="images/portfolio/dogrun.png" alt="" />
-              </div>
-
-              <div class="description-box">
-                <h4>Endless Running Game</h4>
-                <p>
-                  A web game written in pure JS by following a Youtube Tutorial,
-                  made new enimies, new ability, and a new mode.
-                </p>
-
-                <div class="categories">JS Gaming</div>
-              </div>
-
-              <div class="link-box">
-                <a href="https://github.com/LoveIiei/EndlessRunningGame"
-                  >Details</a
-                >
-                <a href="#" class="popup-modal-dismiss">Close</a>
-              </div>
-            </div>
-            <!-- /modal-06 -->
-            <div id="modal-07" class="popup-modal slider mfp-hide">
-              <div class="media">
-                <img src="images/portfolio/music.png" alt="" />
-              </div>
-
-              <div class="description-box">
-                <h4>Music Player in Java</h4>
-                <p>
-                  A Java GUI app written in swing, able to play wav files, like
-                  and create a playlist
-                </p>
-
-                <div class="categories">Java Swing</div>
-              </div>
-
-              <div class="link-box">
-                <a href="https://github.com/LoveIiei/owenplayer">Details</a>
-                <a href="#" class="popup-modal-dismiss">Close</a>
-              </div>
-            </div>
-            <!-- /modal-07 -->
-            <!-- modal popups - end
-	            ============================================================= -->
-          </div>
-          <!-- /portfolio-wrapper -->
-        </div>
         <!-- /twelve -->
       </div>
       <!-- /portfolio-content -->
@@ -610,7 +447,7 @@
             </li>
             <li>
               <a href="https://www.linkedin.com/in/weiyuan-hua-3345232a6/"
-                ><i class="fa fa-linkedin"></i
+                ><i class="fa-brands fa-linkedin"></i
               ></a>
             </li>
           </ul>
@@ -618,7 +455,7 @@
 
         <div class="col-six tab-full">
           <div class="copyright">
-            <span>© Copyright Owen.</span>
+            <span>© Copyright Luyuan.</span>
           </div>
         </div>
 
@@ -641,5 +478,6 @@
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
     <script src="js/language-selector.js"></script>
+    <script src="js/dark-light.js"></script>
   </body>
 </html>
