@@ -1479,7 +1479,7 @@
   * ------------------------------------------------------------------- 
   */
  #about {
-   background: #FFFFFF;
+   background: #0c0b0b;
    padding-top: 12rem;
    padding-bottom: 15rem;
  }
@@ -1779,7 +1779,7 @@
   * ------------------------------------------------------------------- 
   */
  #portfolio {
-   background: #ffffff;
+   background: rgb(21, 21, 21);
    padding-top: 12rem;
    padding-bottom: 12rem;
  }
