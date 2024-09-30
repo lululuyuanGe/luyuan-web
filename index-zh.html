@@ -2,7 +2,7 @@
 <!--[if IE 8]><html class="no-js oldie ie8" lang="en"> <![endif]-->
 <!--[if IE 9]><html class="no-js oldie ie9" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!-->
-<html class="no-js" lang="zh">
+<html class="no-js" lang="en">
   <!--<![endif]-->
 
   <head>
@@ -58,16 +58,7 @@
               </li>
               <li><a class="smoothscroll" href="#about" title="">About</a></li>
               <li>
-                <a class="smoothscroll" href="#resume" title="">Resume</a>
-              </li>
-              <li>
-                <a class="smoothscroll" href="#portfolio" title="">Portfolio</a>
-              </li>
-              <li>
-                <a class="smoothscroll" href="#services" title="">Services</a>
-              </li>
-              <li>
-                <a class="smoothscroll" href="#contact" title="">Contact</a>
+                <a class="smoothscroll" href="#portfolio" title="">Projects</a>
               </li>
             </ul>
           </nav>
@@ -80,11 +71,15 @@
           </div>
           <ul id="dropdown-options" class="dropdown-options">
               <li onclick="selectLanguage('en')">
-                  <img src="images/flag-icons/united-states.svg" alt="English Flag" class="flag-icon" /> E N
+                  <img src="images/flag-icons/united-states.svg" alt="Chinese Flag" class="flag-icon" /> E N
               </li>
           </ul>
         </div>
-            
+
+        <div class="theme-toggle" onclick="toggleTheme()">
+          <img id="light-icon" src="images/dark-light-icons/sun-svgrepo-com.svg" alt="Light Mode" class="theme-icon light" />
+          <img id="dark-icon" src="images/dark-light-icons/moon-svgrepo-com.svg" alt="Dark Mode" class="theme-icon dark" />
+        </div>
       
         <!-- /top-bar -->
       </div>
@@ -95,13 +90,22 @@
     <!-- intro section
    ================================================== -->
     <section id="intro">
+
+      <video autoplay muted loop id="bg-video">
+        <source id="video-source" src="images/background/light-mode-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+    
+
+      
       <div class="intro-overlay"></div>
 
       <div class="intro-content">
         <div class="row">
           <div class="col-twelve">
             <h5>Hello, World.</h5>
-            <h1>戈麓源</h1>
+            <h1>I'm 戈麓源</h1>
 
             <p class="intro-position">
               <span>Back-end Developer</span>
@@ -171,12 +175,9 @@
           <ul class="info-list">
             <li>
               <strong>Fullname:</strong>
-              <span>Owen Hua</span>
+              <span>Luyuan Ge</span>
             </li>
-            <li>
-              <strong>Birth Date:</strong>
-              <span>Apirl 18, 2005</span>
-            </li>
+
             <li>
               <strong>Job:</strong>
               <span>Data Analyst, Backend Developer</span>
@@ -200,209 +201,21 @@
             I also earned a number of certificates from Google.
           </p>
 
-          <ul class="skill-bars">
-            <li>
-              <div class="progress percent90"><span>90%</span></div>
-              <strong>Python</strong>
-            </li>
-            <li>
-              <div class="progress percent85"><span>85%</span></div>
-              <strong>Rust</strong>
-            </li>
-            <li>
-              <div class="progress percent70"><span>70%</span></div>
-              <strong>C/C++</strong>
-            </li>
-            <li>
-              <div class="progress percent95"><span>95%</span></div>
-              <strong>Machine Learning</strong>
-            </li>
-            <li>
-              <div class="progress percent75"><span>75%</span></div>
-              <strong>JavaScript</strong>
-            </li>
-          </ul>
-          <!-- /skill-bars -->
         </div>
       </div>
 
       <div class="row button-section">
-        <div class="col-twelve">
-          <a href="#contact" title="Hire Me" class="button stroke smoothscroll"
-            >Hire Me</a
-          >
+
           <a
-            href="/files/OwenResume.pdf"
+            href="/resumes/resume.pdf"
             title="Download CV"
             class="button button-primary"
             download
             >Download CV</a
           >
-        </div>
       </div>
     </section>
     <!-- /process-->
-
-    <!-- resume Section
-   ================================================== -->
-    <section id="resume" class="grey-section">
-      <div class="row section-intro">
-        <div class="col-twelve">
-          <h5>Resume</h5>
-          <h1>More of my credentials.</h1>
-
-          <p class="lead">
-            Below I will present you some of my work and study experience so
-            far.
-          </p>
-        </div>
-      </div>
-      <!-- /section-intro-->
-
-      <div class="row resume-timeline">
-        <div class="col-twelve resume-header">
-          <h2>Work Experience</h2>
-        </div>
-        <!-- /resume-header -->
-
-        <div class="col-twelve">
-          <div class="timeline-wrap">
-            <div class="timeline-block">
-              <div class="timeline-ico">
-                <i class="fa fa-graduation-cap"></i>
-              </div>
-
-              <div class="timeline-header">
-                <h3>CS Student</h3>
-                <p>July 2023 - Present</p>
-              </div>
-
-              <div class="timeline-content">
-                <h4>University of Toronto</h4>
-                <p>
-                  I am currently pursuing my Computer Science degree at the
-                  esteemed University of Toronto Scarborough campus. In our
-                  introductory course to Computer Science, we delved into
-                  Python, covering fundamental concepts. In the second semester,
-                  we transitioned to C programming, where we explored Memory
-                  Models, Abstract Data Types (ADTs), Binary Search Trees
-                  (BSTs), recursion, and graphs, among other topics.
-                </p>
-              </div>
-            </div>
-            <!-- /timeline-block -->
-
-            <div class="timeline-block">
-              <div class="timeline-ico">
-                <i class="fa fa-graduation-cap"></i>
-              </div>
-
-              <div class="timeline-header">
-                <h3>Data Analyst</h3>
-                <p>April 2022 - May 2022</p>
-              </div>
-
-              <div class="timeline-content">
-                <h4>Sylogix</h4>
-                <p>
-                  I designed a website presenting the past decade's water
-                  quality data in a professional tabular format using HTML and
-                  CSS. Furthermore, I meticulously analyzed and compiled the
-                  database, leveraging Python along with Pandas and NumPy to
-                  manipulate and process the data effectively.
-                </p>
-              </div>
-            </div>
-            <!-- /timeline-block -->
-
-            <div class="timeline-block">
-              <div class="timeline-ico">
-                <i class="fa fa-graduation-cap"></i>
-              </div>
-
-              <div class="timeline-header">
-                <h3>Web Programmer</h3>
-                <p>July 2021 - August 2021</p>
-              </div>
-
-              <div class="timeline-content">
-                <h4>MicroHeadline</h4>
-                <p>
-                  I've utilized Python scrapers to discover and collect data
-                  from various company websites, aiming to enhance work
-                  efficiency. Additionally, I've developed scripts using
-                  Selenium and AutoGui to automate webpage uploads and
-                  operations, further streamlining tasks.
-                </p>
-              </div>
-            </div>
-            <!-- /timeline-block -->
-          </div>
-          <!-- /timeline-wrap -->
-        </div>
-        <!-- /col-twelve -->
-      </div>
-      <!-- /resume-timeline -->
-
-      <div class="row resume-timeline">
-        <div class="col-twelve resume-header">
-          <h2>Education</h2>
-        </div>
-        <!-- /resume-header -->
-
-        <div class="col-twelve">
-          <div class="timeline-wrap">
-            <div class="timeline-block">
-              <div class="timeline-ico">
-                <i class="fa fa-briefcase"></i>
-              </div>
-
-              <div class="timeline-header">
-                <h3>Master Degree</h3>
-                <p>Planning!</p>
-              </div>
-
-              <div class="timeline-content">
-                <h4>University of ...</h4>
-                <p>
-                  I plan to continue my studies in Computer Science for my
-                  master's degree in the future. Thus far, my interests have
-                  gravitated towards areas such as Machine Learning and Cyber
-                  Security.
-                </p>
-              </div>
-            </div>
-            <!-- /timeline-block -->
-
-            <div class="timeline-block">
-              <div class="timeline-ico">
-                <i class="fa fa-briefcase"></i>
-              </div>
-
-              <div class="timeline-header">
-                <h3>Bachelor Degree</h3>
-                <p>September 2023 - May 2027</p>
-              </div>
-
-              <div class="timeline-content">
-                <h4>University of Toronto</h4>
-                <p>
-                  I am currently studying Computer Science at the University of
-                  Toronto Scarborough Campus. Starting in my second year, I plan
-                  to pursue the comprehensive stream to gain a broader
-                  understanding of the computer science field as a whole.
-                </p>
-              </div>
-            </div>
-            <!-- /timeline-block -->
-          </div>
-          <!-- /timeline-wrap -->
-        </div>
-        <!-- /col-twelve -->
-      </div>
-      <!-- /resume-timeline -->
-    </section>
-    <!-- /features -->
 
     <!-- Portfolio Section
    ================================================== -->
@@ -422,11 +235,23 @@
       <!-- /section-intro-->
       
       <div class="projects-container">
-        <div class="project">
+        <div class="project" onclick="redirectToPage(`https://iconduck.com/emojis/96535/china`)">
           <div class="cover-pic">
-            <img src="images/3efffb85e1b742d78b4949245d1b1be5.jpeg">
+            <img src="images/background.jpg">
           </div>
-          <div class="description">asdasd</div>
+          <div class="description"><p>This project is for testing projects'section only!</p></div>
+        </div>
+        <div class="project" onclick="redirectToPage(`https://iconduck.com/emojis/96535/china`)">
+          <div class="cover-pic">
+            <img src="images/background.jpg">
+          </div>
+          <div class="description"><p>This project is for testing projects'section only!</p></div>
+        </div>
+        <div class="project" onclick="redirectToPage(`https://iconduck.com/emojis/96535/china`)">
+          <div class="cover-pic">
+            <img src="images/background.jpg">
+          </div>
+          <div class="description"><p>This project is for testing projects'section only!</p></div>
         </div>
         <!-- <div>project 2</div>
         <div>proejct 3</div>
@@ -434,546 +259,13 @@
         <div>project 5</div>
         <div>project 6</div> -->
       </div>
-
-
-            <!-- modal popups - begin
-	            ============================================================= -->
-            <div id="modal-01" class="popup-modal slider mfp-hide">
-              <div class="media">
-                <img src="images/portfolio/scraper.png" alt="" />
-              </div>
-
-              <div class="description-box">
-                <h4>Scraper</h4>
-                <p>Getting the information you want stored on a website.</p>
-
-                <div class="categories">Python Backend</div>
-              </div>
-
-              <div class="link-box">
-                <a href="https://github.com/LoveIiei/MySpotifyDownload"
-                  >Details</a
-                >
-                <a href="#" class="popup-modal-dismiss">Close</a>
-              </div>
-            </div>
-            <!-- /modal-01 -->
-
-            <div id="modal-02" class="popup-modal slider mfp-hide">
-              <div class="media">
-                <img src="images/portfolio/Minecraft.jpg" alt="" />
-              </div>
-
-              <div class="description-box">
-                <h4>Minecraft Mod</h4>
-                <p>
-                  Design and create a Minecraft watergun mod, that invovles 6
-                  different waterguns, which you can recharge with water when it
-                  is died.
-                </p>
-
-                <div class="categories">Java Programming</div>
-              </div>
-
-              <div class="link-box">
-                <a href="https://github.com/MDHSCompSci/Forge-MDHSCompsci-1.18"
-                  >Details</a
-                >
-                <a href="#" class="popup-modal-dismiss">Close</a>
-              </div>
-            </div>
-            <!-- /modal-02 -->
-
-            <div id="modal-03" class="popup-modal slider mfp-hide">
-              <div class="media">
-                <img src="images/portfolio/CheTimeLine.png" alt="" />
-              </div>
-
-              <div class="description-box">
-                <h4>Chemistry</h4>
-                <p>
-                  A timeline of all the important discover in atomic theory
-                  build in Python Tkinter
-                </p>
-
-                <div class="categories">UI Design</div>
-              </div>
-
-              <div class="link-box">
-                <a href="https://github.com/LoveIiei/AtomicTheoryPPT"
-                  >Details</a
-                >
-                <a href="#" class="popup-modal-dismiss">Close</a>
-              </div>
-            </div>
-            <!-- /modal-03 -->
-
-            <div id="modal-04" class="popup-modal slider mfp-hide">
-              <div class="media">
-                <img src="images/portfolio/rpg.png" alt="" />
-              </div>
-
-              <div class="description-box">
-                <h4>RPG game</h4>
-                <p>
-                  A small JRPG game build using RPG Maker MZ, with missions,
-                  pets, boss war...
-                </p>
-
-                <div class="categories">Video Game</div>
-              </div>
-
-              <div class="link-box">
-                <a href="https://www.rpgmakerweb.com/">Details</a>
-                <a href="#" class="popup-modal-dismiss">Close</a>
-              </div>
-            </div>
-            <!-- /modal-04 -->
-
-            <div id="modal-05" class="popup-modal slider mfp-hide">
-              <div class="media">
-                <img src="images/portfolio/ML.png" alt="" />
-              </div>
-
-              <div class="description-box">
-                <h4>Machine Learning</h4>
-                <p>
-                  A certificate received from Coursera after passing the course,
-                  leanred a great amount of knowledge through hands on activity.
-                </p>
-
-                <div class="categories">Data Analyst</div>
-              </div>
-
-              <div class="link-box">
-                <a
-                  href="https://www.coursera.org/professional-certificates/preparing-for-google-cloud-machine-learning-engineer-professional-certificate"
-                  >Details</a
-                >
-                <a href="#" class="popup-modal-dismiss">Close</a>
-              </div>
-            </div>
-            <!-- /modal-05 -->
-
-            <div id="modal-06" class="popup-modal slider mfp-hide">
-              <div class="media">
-                <img src="images/portfolio/dogrun.png" alt="" />
-              </div>
-
-              <div class="description-box">
-                <h4>Endless Running Game</h4>
-                <p>
-                  A web game written in pure JS by following a Youtube Tutorial,
-                  made new enimies, new ability, and a new mode.
-                </p>
-
-                <div class="categories">JS Gaming</div>
-              </div>
-
-              <div class="link-box">
-                <a href="https://github.com/LoveIiei/EndlessRunningGame"
-                  >Details</a
-                >
-                <a href="#" class="popup-modal-dismiss">Close</a>
-              </div>
-            </div>
-            <!-- /modal-06 -->
-            <div id="modal-07" class="popup-modal slider mfp-hide">
-              <div class="media">
-                <img src="images/portfolio/music.png" alt="" />
-              </div>
-
-              <div class="description-box">
-                <h4>Music Player in Java</h4>
-                <p>
-                  A Java GUI app written in swing, able to play wav files, like
-                  and create a playlist
-                </p>
-
-                <div class="categories">Java Swing</div>
-              </div>
-
-              <div class="link-box">
-                <a href="https://github.com/LoveIiei/owenplayer">Details</a>
-                <a href="#" class="popup-modal-dismiss">Close</a>
-              </div>
-            </div>
-            <!-- /modal-07 -->
-            <!-- modal popups - end
-	            ============================================================= -->
-          </div>
-          <!-- /portfolio-wrapper -->
-        </div>
         <!-- /twelve -->
       </div>
       <!-- /portfolio-content -->
     </section>
     <!-- /portfolio -->
 
-    <!-- services Section
-   ================================================== -->
-    <section id="services">
-      <div class="overlay"></div>
-
-      <div class="row section-intro">
-        <div class="col-twelve">
-          <h5>Services</h5>
-          <h1>What Can I Do For You?</h1>
-
-          <p class="lead">
-            Here will be some of the things that I have experience on, and feel
-            confident doing.
-          </p>
-        </div>
-      </div>
-      <!-- /section-intro -->
-
-      <div class="row services-content">
-        <div id="owl-slider" class="owl-carousel services-list">
-          <div class="service">
-            <span class="icon"><i class="icon-earth"></i></span>
-
-            <div class="service-content">
-              <h3>Backend Development</h3>
-
-              <p class="desc">
-                I have more than one year of experiences working with different
-                languages such as C/C++, Rust, Python , Java, namely school
-                works, small projects, little video games... I am also fimiliar
-                with Abstract Data Types, Complexity, Sortings, and BSTs... I am
-                also familiar with using recursion and software design. I am
-                confident that I can learn the required knowledge for a new
-                project in a very short period of time.
-              </p>
-            </div>
-          </div>
-          <!-- /service -->
-
-          <div class="service">
-            <span class="icon"><i class="icon-window"></i></span>
-
-            <div class="service-content">
-              <h3>Web Development</h3>
-
-              <p class="desc">
-                I have built three personal portfolios using HTML, JavaScript,
-                and CSS, each showcasing distinct styles and features. Notably,
-                one of these websites was developed using React and Tailwind
-                CSS. While I wouldn't consider myself a master in these
-                technologies, my experience allows me to quickly learn and adapt
-                to new requirements. Additionally, I created a web game in pure
-                JavaScript by following a YouTube tutorial and adding my own
-                enhancements, such as more enemies, skills, and modes,
-                demonstrating my proficiency with JavaScript.
-              </p>
-            </div>
-          </div>
-          <!-- /service -->
-
-          <div class="service">
-            <span class="icon"><i class="icon-paint-brush"></i></span>
-
-            <div class="service-content">
-              <h3>Machine Learning/Data Analysis</h3>
-
-              <p class="desc">
-                I earned the "Preparing for Google Cloud - Machine Learning
-                Engineer" certificate from Coursera, completing it over 5 months
-                with 7 hours of study per week. This program involved multiple
-                real-world projects and problem-solving using TensorFlow and
-                Google Cloud. Additionally, I have independently studied
-                PyTorch. To further prepare for this role, I plan to take more
-                advanced courses in mathematics and algorithm design.
-              </p>
-            </div>
-          </div>
-          <!-- /service -->
-
-          <div class="service">
-            <span class="icon"><i class="icon-toggles"></i></span>
-
-            <div class="service-content">
-              <h3>Web Scraper</h3>
-
-              <p class="desc">
-                I have written several scripts for web scraping (for study
-                purposes only), targeting areas such as novels, music, videos,
-                movies, and images. These include both original projects and
-                recreations of well-known tools like Spotdl and YoutubeDl.
-                Additionally, my expertise in web automation can be highly
-                beneficial for the company's daily operations, such as uploading
-                and downloading information from the company's website.
-              </p>
-            </div>
-          </div>
-          <!-- /service -->
-
-          <div class="service">
-            <span class="icon"><i class="icon-image"></i></span>
-
-            <div class="service-content">
-              <h3>Graphics Design</h3>
-
-              <p class="desc">
-                I am a skilled computer graphic designer, adept at creating
-                visually compelling digital art. I possess a deep understanding
-                of design principles and modern software tools. My expertise
-                includes creating and manipulating vector graphics, 3D modeling,
-                and digital animation. I have a keen eye for aesthetics and
-                detail, and the ability to translate ideas into captivating
-                visual narratives. My work enhances user experiences, making
-                interfaces intuitive and engaging.
-              </p>
-            </div>
-          </div>
-          <!-- /service -->
-
-          <div class="service">
-            <span class="icon"><i class="icon-chat"></i></span>
-
-            <div class="service-content">
-              <h3>Consultancy</h3>
-
-              <p class="desc">
-                I am a seasoned consultant with a wealth of knowledge in my
-                field. I am excel at identifying challenges, analyzing complex
-                problems, and formulating strategic solutions. My strong
-                communication skills enable them to articulate strategies
-                effectively, guiding clients towards their goals. I am known for
-                my critical thinking, project management skills, and ability to
-                deliver results. My expertise and insights are highly sought
-                after, making them a valuable asset in any consultancy
-                engagement.
-              </p>
-            </div>
-          </div>
-          <!-- /service -->
-        </div>
-        <!-- /services-list -->
-      </div>
-      <!-- /services-content -->
-    </section>
-    <!-- /services -->
-
-    <!-- stats Section
-   ================================================== -->
-    <section id="stats" class="count-up">
-      <div class="row">
-        <div class="col-twelve">
-          <div
-            class="block-1-6 block-s-1-3 block-tab-1-2 block-mob-full stats-list"
-          >
-            <div class="bgrid stat">
-              <div class="icon-part">
-                <i class="icon-pencil-ruler"></i>
-              </div>
-
-              <h3 class="stat-count">150</h3>
-
-              <h5 class="stat-title">Projects Completed</h5>
-            </div>
-            <!-- /stat -->
-
-            <div class="bgrid stat">
-              <div class="icon-part">
-                <i class="icon-users"></i>
-              </div>
-
-              <h3 class="stat-count">20</h3>
-
-              <h5 class="stat-title">Happy Clients</h5>
-            </div>
-            <!-- /stat -->
-
-            <div class="bgrid stat">
-              <div class="icon-part">
-                <i class="icon-badge"></i>
-              </div>
-
-              <h3 class="stat-count">20</h3>
-
-              <h5 class="stat-title">Awards Received</h5>
-            </div>
-            <!-- /stat -->
-
-            <div class="bgrid stat">
-              <div class="icon-part">
-                <i class="icon-light-bulb"></i>
-              </div>
-
-              <h3 class="stat-count">56</h3>
-
-              <h5 class="stat-title">Crazy Ideas</h5>
-            </div>
-            <!-- /stat -->
-
-            <div class="bgrid stat">
-              <div class="icon-part">
-                <i class="icon-cup"></i>
-              </div>
-
-              <h3 class="stat-count">200</h3>
-
-              <h5 class="stat-title">Coffee Cups</h5>
-            </div>
-            <!-- /stat -->
-
-            <div class="bgrid stat">
-              <div class="icon-part">
-                <i class="icon-clock"></i>
-              </div>
-
-              <h3 class="stat-count">720</h3>
-
-              <h5 class="stat-title">Hours</h5>
-            </div>
-            <!-- /stat -->
-          </div>
-          <!-- /stats-list -->
-        </div>
-        <!-- /twelve -->
-      </div>
-      <!-- /row -->
-    </section>
-    <!-- /stats -->
-
-    <!-- contact
-   ================================================== -->
-    <section id="contact">
-      <div class="row section-intro">
-        <div class="col-twelve">
-          <h5>Contact</h5>
-          <h1>I'd Love To Hear From You.</h1>
-
-          <p class="lead">
-            If you have any questions or just want to learn more about me,
-            please feel free to contact me. Please use a valid email address, so
-            that I can get back to you.
-          </p>
-        </div>
-      </div>
-      <!-- /section-intro -->
-
-      <div class="row contact-form">
-        <div class="col-twelve">
-          <!-- form -->
-          <form
-            name="contactForm"
-            id="contactForm"
-            method="post"
-            action="process_form.php"
-          >
-            <fieldset>
-              <div class="form-field">
-                <input
-                  name="contactName"
-                  type="text"
-                  id="contactName"
-                  placeholder="Name"
-                  value=""
-                  minlength="2"
-                  required=""
-                />
-              </div>
-              <div class="form-field">
-                <input
-                  name="contactEmail"
-                  type="email"
-                  id="contactEmail"
-                  placeholder="Email"
-                  value=""
-                  required=""
-                />
-              </div>
-              <div class="form-field">
-                <input
-                  name="contactSubject"
-                  type="text"
-                  id="contactSubject"
-                  placeholder="Subject"
-                  value=""
-                />
-              </div>
-              <div class="form-field">
-                <textarea
-                  name="contactMessage"
-                  id="contactMessage"
-                  placeholder="message"
-                  rows="10"
-                  cols="50"
-                  required=""
-                ></textarea>
-              </div>
-              <div class="form-field">
-                <button class="submitform" type="submit">Submit</button>
-                <div id="submit-loader">
-                  <div class="text-loader">Sending...</div>
-                  <div class="s-loader">
-                    <div class="bounce1"></div>
-                    <div class="bounce2"></div>
-                    <div class="bounce3"></div>
-                  </div>
-                </div>
-              </div>
-            </fieldset>
-          </form>
-          <!-- Form End -->
-
-          <!-- contact-warning -->
-          <div id="message-warning"></div>
-          <!-- contact-success -->
-          <div id="message-success">
-            <i class="fa fa-check"></i>Your message was sent, thank you!<br />
-          </div>
-        </div>
-        <!-- /col-twelve -->
-      </div>
-
-      <div class="row contact-info">
-        <div class="col-four tab-full">
-          <div class="icon">
-            <i class="icon-pin"></i>
-          </div>
-
-          <h5>Where to find me</h5>
-
-          <p>
-            1295 Military Trail<br />
-            Ironwood, Scarborough<br />
-            Canada
-          </p>
-        </div>
-
-        <div class="col-four tab-full collapse">
-          <div class="icon">
-            <i class="icon-mail"></i>
-          </div>
-
-          <h5>Email Me At</h5>
-
-          <p>
-            huawy7788@outlook.com<br />
-            scaresneeze@gmail.com
-          </p>
-        </div>
-
-        <div class="col-four tab-full">
-          <div class="icon">
-            <i class="icon-phone"></i>
-          </div>
-
-          <h5>Call Me At</h5>
-
-          <p>
-            Phone: 647-866-6650<br />
-            CN-Mobile: 186-5262-8227<br />
-            Fax: N/A
-          </p>
-        </div>
-      </div>
-      <!-- /contact-info -->
-    </section>
-    <!-- /contact -->
+   
 
     <!-- footer
    ================================================== -->
@@ -984,27 +276,22 @@
           <ul class="footer-social">
             <li>
               <a href="https://www.instagram.com/owen.hua"
-                ><i class="fa fa-instagram"></i
+                ><i class="fa-brands fa-instagram" style="color: #E1306C;"></i
               ></a>
             </li>
             <li>
               <a href="https://github.com/LoveIiei"
-                ><i class="fa fa-github"></i
+                ><i class="fa-brands fa-github" style="color: #181717;"></i
               ></a>
             </li>
             <li>
               <a href="https://twitter.com/Owen1_1ua"
-                ><i class="fa fa-twitter"></i
-              ></a>
-            </li>
-            <li>
-              <a href="https://steamcommunity.com/profiles/76561199097443840/"
-                ><i class="fa fa-steam"></i
+                ><i class="fa-brands fa-x-twitter" style="color: black;"></i
               ></a>
             </li>
             <li>
               <a href="https://www.linkedin.com/in/weiyuan-hua-3345232a6/"
-                ><i class="fa fa-linkedin"></i
+                ><i class="fa-brands fa-linkedin" style="color: #0077b5;"></i
               ></a>
             </li>
           </ul>
@@ -1012,7 +299,7 @@
 
         <div class="col-six tab-full">
           <div class="copyright">
-            <span>© Copyright Owen.</span>
+            <span>© Copyright Luyuan.</span>
           </div>
         </div>
 
@@ -1035,5 +322,6 @@
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
     <script src="js/language-selector.js"></script>
+    <script src="js/dark-light.js"></script>
   </body>
 </html>
