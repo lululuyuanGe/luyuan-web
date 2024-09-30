@@ -1084,7 +1084,8 @@
   * ------------------------------------------------------------------- 
   */
  header {
-   position: fixed;
+   position: absolute;
+   display: inline-flex;
    width: 100%;
    min-height: 66px;
    z-index: 600;
@@ -1092,13 +1093,14 @@
 
  }
  header .row {
-   position: relative;
+   gap: -20px;
    min-height: 66px;
    text-align: left;
    padding-left: 0;
  }
  header .top-bar {
-   display: block;
+   display: flex;
+   
    background: transparent;
    min-width: 108px;
    min-height: 66px;
@@ -1246,32 +1248,90 @@
    background: none;
    color: #FF0077;
  }
- 
+
  /**
-  * responsive:
-  * header styles
-  * --------------------------------------------------------------- 
+  * language selector
+  * ------------------------------------------------------------------- 
   */
- @media only screen and (max-width:1024px) {
-   header .top-bar {
-     left: 0px;
-   }
- }
- @media only screen and (max-width:768px) {
-   header .top-bar {
-     left: 50px;
-   }
- }
- @media only screen and (max-width:600px) {
-   header .top-bar {
-     left: 35px;
-   }
- }
- @media only screen and (max-width:400px) {
-   header .top-bar {
-     left: 25px;
-   }
- }
+  
+  /* Custom dropdown container */
+  .custom-dropdown {
+  position: absolute;
+  left: 40px;
+  top: 18px;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 10px;
+  }
+
+  .dropdown-selected {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border: none;
+  border-radius: 10px;
+  background-color: #FF0077;
+  width: 70px;
+  height: 30px;
+  }
+
+  .dropdown-selected img {
+  width: 20px;
+  height: 15px;
+  margin-right: 5px;
+  }
+
+  .dropdown-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #FF0077;
+  border-radius: 10px;
+  border: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+  z-index: 1000;
+  width: 70px;
+  height: 30px;
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: top; 
+  transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .dropdown-options.show {
+    max-height: 100px;
+    opacity: 1;
+    transform: scaleY(1);
+  }
+
+  #current-language{
+    color: #FFFFFF;
+  }
+
+  .dropdown-options li {
+  padding: 5px;
+  width: 70px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #FFFFFF;
+  }
+
+  .dropdown-options li:hover {
+  background-color: #cab0b0;
+  border-radius: 10px;
+  }
+
+  .flag-icon {
+  width: 20px;
+  height: 15px;
+  }
+
+
  
  
  /** 
@@ -1892,13 +1952,23 @@
   }
 
   .projects-container .project {
-    background-color: #f0f0f0; 
+    background-color: #000000; 
     padding: 0;            
     text-align: center;        
-    border: 1px solid #ccc;    
-    border-radius: 8px;
+    border: none; 
+    border-radius: 10px;
     width: 100%;
     box-sizing: border-box;
+    border: 2px solid #FF0077;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    box-shadow: 0 0 15px 5px rgba(221, 10, 10, 0.2); /* Subtle shadow */
+  }
+
+  .projects-container .project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px 10px rgba(202, 23, 47, 1);
+    border: 3px solid #FF0077;
+    cursor: pointer;
   }
 
   .projects-container .cover-pic{
@@ -1908,14 +1978,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border: none;
   }
 
   .projects-container .cover-pic img {
-    width: 100%; /* Make the image fill the width of the container */
-    height: 100%; /* Make the image fill the height of the container */
-    object-fit: cover; /* Crop the image to cover the entire div */
-    border-radius: 8px 8px 0 0; /* Optional: Rounded corners to match the container */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 8px;
   }
+
+  .projects-container .description p{
+    color: rgb(255, 255, 255);
+    transition: text-decoration-color 0.3s ease;
+  }
+
+  .project:hover .description p {
+    text-decoration: underline;     /* Apply the underline effect */
+    text-decoration-color: #FF0077; /* Set the color of the underline */
+    text-decoration-thickness: 2px; /* Adjust the thickness (optional) */
+}
 
   @media (max-width: 1200px) {
     .projects-container {
