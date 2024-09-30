@@ -1,16 +1,21 @@
 function toggleTheme() {
     document.body.classList.toggle('dark-mode');
 
+    const video = document.getElementById('bg-video');
     const videoSource = document.getElementById('video-source');
 
-    // Change video source based on the current mode
-    if (document.body.classList.contains('dark-mode')) {
-        videoSource.src = 'images/background/cat-astranaut.mp4'; 
-    } else {
-        videoSource.src = 'images/background/cat-pool.mp4'; 
-    }
+    video.classList.add('fade-out');
 
-    document.getElementById('bg-video').load();
+    setTimeout(() => {
+        if (document.body.classList.contains('dark-mode')) {
+            videoSource.src = 'images/background/dark-mode-video.mp4';
+        } else {
+            videoSource.src = 'images/background/light-mode-video.mp4';
+        }
+        
+        video.load();
+        video.classList.remove('fade-out');video
+    }, 500);
 
     const currentTheme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
     localStorage.setItem('theme', currentTheme);
@@ -18,12 +23,11 @@ function toggleTheme() {
 
 window.onload = function() {
     const savedTheme = localStorage.getItem('theme');
-    const videoSource = document.getElementById('video-source');
     if (savedTheme === 'dark') {
         document.body.classList.add('dark-mode');
-        videoSource.src = 'images/background/dark-mode-video.mp4';
+        document.getElementById('video-source').src = 'images/background/dark-mode-video.mp4';
     } else {
-        videoSource.src = 'images/background/light-mode-video.mp4';
+        document.getElementById('video-source').src = 'images/background/light-mode-video.mp4';
     }
     document.getElementById('bg-video').load();
 };

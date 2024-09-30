@@ -58,10 +58,7 @@
               </li>
               <li><a class="smoothscroll" href="#about" title="">About</a></li>
               <li>
-                <a class="smoothscroll" href="#portfolio" title="">Portfolio</a>
-              </li>
-              <li>
-                <a class="smoothscroll" href="#contact" title="">Contact</a>
+                <a class="smoothscroll" href="#portfolio" title="">Projects</a>
               </li>
             </ul>
           </nav>
@@ -93,10 +90,13 @@
     <!-- intro section
    ================================================== -->
     <section id="intro">
+
       <video autoplay muted loop id="bg-video">
-        <source id="video-source" src="../images/background/astronaut-cat-sitting-on-the-moon-moewalls-com.mp4" type="video/mp4">
+        <source id="video-source" src="images/background/light-mode-video.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
+
+    
 
       
       <div class="intro-overlay"></div>
@@ -201,37 +201,11 @@
             I also earned a number of certificates from Google.
           </p>
 
-          <ul class="skill-bars">
-            <li>
-              <div class="progress percent90"><span>90%</span></div>
-              <strong>Python</strong>
-            </li>
-            <li>
-              <div class="progress percent85"><span>85%</span></div>
-              <strong>Rust</strong>
-            </li>
-            <li>
-              <div class="progress percent70"><span>70%</span></div>
-              <strong>C/C++</strong>
-            </li>
-            <li>
-              <div class="progress percent95"><span>95%</span></div>
-              <strong>Machine Learning</strong>
-            </li>
-            <li>
-              <div class="progress percent75"><span>75%</span></div>
-              <strong>JavaScript</strong>
-            </li>
-          </ul>
-          <!-- /skill-bars -->
         </div>
       </div>
 
       <div class="row button-section">
-        <div class="col-twelve">
-          <a href="#contact" title="Hire Me" class="button stroke smoothscroll"
-            >Hire Me</a
-          >
+
           <a
             href="/files/OwenResume.pdf"
             title="Download CV"
@@ -239,7 +213,6 @@
             download
             >Download CV</a
           >
-        </div>
       </div>
     </section>
     <!-- /process-->
@@ -268,6 +241,18 @@
           </div>
           <div class="description"><p>This project is for testing projects'section only!</p></div>
         </div>
+        <div class="project" onclick="redirectToPage(`https://iconduck.com/emojis/96535/china`)">
+          <div class="cover-pic">
+            <img src="images/background.jpg">
+          </div>
+          <div class="description"><p>This project is for testing projects'section only!</p></div>
+        </div>
+        <div class="project" onclick="redirectToPage(`https://iconduck.com/emojis/96535/china`)">
+          <div class="cover-pic">
+            <img src="images/background.jpg">
+          </div>
+          <div class="description"><p>This project is for testing projects'section only!</p></div>
+        </div>
         <!-- <div>project 2</div>
         <div>proejct 3</div>
         <div>project 4</div>
@@ -280,143 +265,7 @@
     </section>
     <!-- /portfolio -->
 
-    <!-- contact
-   ================================================== -->
-    <section id="contact">
-      <div class="row section-intro">
-        <div class="col-twelve">
-          <h5>Contact</h5>
-          <h1>I'd Love To Hear From You.</h1>
-
-          <p class="lead">
-            If you have any questions or just want to learn more about me,
-            please feel free to contact me. Please use a valid email address, so
-            that I can get back to you.
-          </p>
-        </div>
-      </div>
-      <!-- /section-intro -->
-
-      <div class="row contact-form">
-        <div class="col-twelve">
-          <!-- form -->
-          <form
-            name="contactForm"
-            id="contactForm"
-            method="post"
-            action="process_form.php"
-          >
-            <fieldset>
-              <div class="form-field">
-                <input
-                  name="contactName"
-                  type="text"
-                  id="contactName"
-                  placeholder="Name"
-                  value=""
-                  minlength="2"
-                  required=""
-                />
-              </div>
-              <div class="form-field">
-                <input
-                  name="contactEmail"
-                  type="email"
-                  id="contactEmail"
-                  placeholder="Email"
-                  value=""
-                  required=""
-                />
-              </div>
-              <div class="form-field">
-                <input
-                  name="contactSubject"
-                  type="text"
-                  id="contactSubject"
-                  placeholder="Subject"
-                  value=""
-                />
-              </div>
-              <div class="form-field">
-                <textarea
-                  name="contactMessage"
-                  id="contactMessage"
-                  placeholder="message"
-                  rows="10"
-                  cols="50"
-                  required=""
-                ></textarea>
-              </div>
-              <div class="form-field">
-                <button class="submitform" type="submit">Submit</button>
-                <div id="submit-loader">
-                  <div class="text-loader">Sending...</div>
-                  <div class="s-loader">
-                    <div class="bounce1"></div>
-                    <div class="bounce2"></div>
-                    <div class="bounce3"></div>
-                  </div>
-                </div>
-              </div>
-            </fieldset>
-          </form>
-          <!-- Form End -->
-
-          <!-- contact-warning -->
-          <div id="message-warning"></div>
-          <!-- contact-success -->
-          <div id="message-success">
-            <i class="fa fa-check"></i>Your message was sent, thank you!<br />
-          </div>
-        </div>
-        <!-- /col-twelve -->
-      </div>
-
-      <div class="row contact-info">
-        <div class="col-four tab-full">
-          <div class="icon">
-            <i class="icon-pin"></i>
-          </div>
-
-          <h5>Where to find me</h5>
-
-          <p>
-            1295 Military Trail<br />
-            Ironwood, Scarborough<br />
-            Canada
-          </p>
-        </div>
-
-        <div class="col-four tab-full collapse">
-          <div class="icon">
-            <i class="icon-mail"></i>
-          </div>
-
-          <h5>Email Me At</h5>
-
-          <p>
-            huawy7788@outlook.com<br />
-            scaresneeze@gmail.com
-          </p>
-        </div>
-
-        <div class="col-four tab-full">
-          <div class="icon">
-            <i class="icon-phone"></i>
-          </div>
-
-          <h5>Call Me At</h5>
-
-          <p>
-            Phone: 647-866-6650<br />
-            CN-Mobile: 186-5262-8227<br />
-            Fax: N/A
-          </p>
-        </div>
-      </div>
-      <!-- /contact-info -->
-    </section>
-    <!-- /contact -->
+   
 
     <!-- footer
    ================================================== -->
@@ -427,27 +276,22 @@
           <ul class="footer-social">
             <li>
               <a href="https://www.instagram.com/owen.hua"
-                ><i class="fa fa-instagram"></i
+                ><i class="fa-brands fa-instagram" style="color: #E1306C;"></i
               ></a>
             </li>
             <li>
               <a href="https://github.com/LoveIiei"
-                ><i class="fa fa-github"></i
+                ><i class="fa-brands fa-github" style="color: #181717;"></i
               ></a>
             </li>
             <li>
               <a href="https://twitter.com/Owen1_1ua"
-                ><i class="fa fa-twitter"></i
-              ></a>
-            </li>
-            <li>
-              <a href="https://steamcommunity.com/profiles/76561199097443840/"
-                ><i class="fa fa-steam"></i
+                ><i class="fa-brands fa-x-twitter" style="color: black;"></i
               ></a>
             </li>
             <li>
               <a href="https://www.linkedin.com/in/weiyuan-hua-3345232a6/"
-                ><i class="fa-brands fa-linkedin"></i
+                ><i class="fa-brands fa-linkedin" style="color: #0077b5;"></i
               ></a>
             </li>
           </ul>
