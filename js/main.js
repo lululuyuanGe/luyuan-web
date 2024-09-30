@@ -289,3 +289,10 @@
 	});		
 
 })(jQuery);
+
+ 	/*----------------------------------------------------- */
+  	/*Direct to my project's url
+   ------------------------------------------------------- */ 
+	 function redirectToPage(url) {
+		window.open(url, '_blank', 'noopener,noreferrer');
+}
